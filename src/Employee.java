@@ -23,7 +23,9 @@ public class Employee {
     }
 
     public void setDepartment(int department) {
-        this.department = department;
+        if (department >= 1 && department <= 5) {
+            this.department = department;
+        }
     }
 
     public int getMonthSalary() {
