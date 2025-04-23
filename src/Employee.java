@@ -9,9 +9,12 @@ public class Employee {
 
     public Employee(String fullName, int department, int monthSalary) {
         this.fullName = fullName;
-        this.department = department;
+        setDepartment(department);
         this.monthSalary = monthSalary;
         this.id = ++counter;
+    }
+
+    public Employee() {
     }
 
     public String getFullName() {
@@ -25,6 +28,8 @@ public class Employee {
     public void setDepartment(int department) {
         if (department >= 1 && department <= 5) {
             this.department = department;
+        } else {
+            System.out.println("Вы ввели недопустимый номер отдела.");
         }
     }
 
